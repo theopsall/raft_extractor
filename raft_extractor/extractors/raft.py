@@ -18,7 +18,6 @@ class Raft(nn.Module):
         self.model = raft_large(weights=self.weights, progress=False).to(self.device)
         self.model.eval()
         self.output_layers = output_layers
-        #print(self.output_layers)
         self.selected_out = OrderedDict()
         self.fhooks = []
 
